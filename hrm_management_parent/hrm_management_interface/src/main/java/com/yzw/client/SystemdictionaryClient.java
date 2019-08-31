@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@FeignClient(value = "ZUUL-GATEWAY",configuration = FeignClientsConfiguration.class,
+@FeignClient(value = "HRM-ZUUL",configuration = FeignClientsConfiguration.class,
         fallbackFactory = SystemdictionaryClientHystrixFallbackFactory.class)
 @RequestMapping("/user/systemdictionary")
 public interface SystemdictionaryClient {
