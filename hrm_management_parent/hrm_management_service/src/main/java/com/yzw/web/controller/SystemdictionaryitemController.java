@@ -85,4 +85,9 @@ public class SystemdictionaryitemController {
             page = systemdictionaryitemService.selectPage(page);
             return new PageList<Systemdictionaryitem>(page.getTotal(),page.getRecords());
     }
+    //条件查询
+    @GetMapping(value = "/listSn")
+    public List<Systemdictionaryitem> getSystemdictionaryitems(String sn){
+        return systemdictionaryitemService.listByParentSn(sn);
+    }
 }

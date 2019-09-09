@@ -1,8 +1,8 @@
 package com.yzw.web.controller;
 
-import com.yzw.service.ICourseTypeService;
 import com.yzw.domain.CourseType;
 import com.yzw.query.CourseTypeQuery;
+import com.yzw.service.ICourseTypeService;
 import com.yzw.util.AjaxResult;
 import com.yzw.util.PageList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,5 +86,9 @@ public class CourseTypeController {
          * 分页+高级查询+关联查询
          */
         return courseTypeService.selectListPage(query);
+    }
+    @GetMapping("/jsonTree")
+    public List<CourseType> jsonTree(){
+        return courseTypeService.queryAllTree(0L);
     }
 }

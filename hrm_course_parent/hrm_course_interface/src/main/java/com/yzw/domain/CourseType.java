@@ -9,6 +9,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import org.springframework.format.annotation.DateTimeFormat;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * <p>
@@ -59,6 +61,21 @@ public class CourseType extends Model<CourseType> {
      * 商品数量
      */
     private Integer totalCount;
+
+    /**
+     * children树
+     * @return
+     */
+    @TableField(exist = false)
+    private List<CourseType> children=new ArrayList<>();
+
+    public List<CourseType> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<CourseType> children) {
+        this.children = children;
+    }
 
     public CourseType getParent() {
         return parent;

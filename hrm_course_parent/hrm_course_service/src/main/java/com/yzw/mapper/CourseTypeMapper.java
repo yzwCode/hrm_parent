@@ -1,10 +1,10 @@
 package com.yzw.mapper;
 
+
 import com.baomidou.mybatisplus.plugins.Page;
-import com.yzw.domain.CourseType;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import com.yzw.domain.CourseType;
 import com.yzw.query.CourseTypeQuery;
-import javafx.scene.control.Pagination;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;

@@ -1,9 +1,11 @@
 package com.yzw.service;
 
-import com.yzw.domain.CourseType;
 import com.baomidou.mybatisplus.service.IService;
+import com.yzw.domain.CourseType;
 import com.yzw.query.CourseTypeQuery;
 import com.yzw.util.PageList;
+
+import java.util.List;
 
 /**
  * <p>
@@ -16,4 +18,6 @@ import com.yzw.util.PageList;
 public interface ICourseTypeService extends IService<CourseType> {
 
     PageList<CourseType> selectListPage(CourseTypeQuery query);
+
+    List<CourseType> queryAllTree(Long pid);
 }
